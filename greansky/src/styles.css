@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+.home-container {
+    background: azure;
+    height: 100vh;
+}
+.request_Link {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #00627b;
+    text-decoration: underline;
+    margin-left: 5px;
+    vertical-align: super;
+}
+.card-header {
+    padding: .4rem 1rem !important;
+}
+.accordian_section {
+    border:1px solid #afecfb;
+    clear:both;
+    border-top:0px;
+    margin-bottom: 15px;
+}
+.accordian_Header {
+    font-size:12pt;
+    font-weight:bold;
+}
+.table td, .table th {
+    padding: .25rem !important;
+    vertical-align: middle !important;
+    border: 1px solid #dee2e6;
+}

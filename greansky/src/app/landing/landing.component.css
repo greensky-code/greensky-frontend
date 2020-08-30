@@ -1,0 +1,20 @@
+.menu-container{
+    display: flex;
+    background: #17a2b826;
+    margin-top: 1rem;
+    padding-left: 200px;
+}
+.menu {
+    background: #1eb7cf;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    padding: 0.6rem;
+    width: 200px;
+    border-right: 1.2px solid #000;
+    cursor: pointer;
+}
+.menu.active {
+    font-weight: bold;
+    background: #117a8b;
+}

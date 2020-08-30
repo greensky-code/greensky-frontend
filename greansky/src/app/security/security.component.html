@@ -1,0 +1,16 @@
+<div class="security-container">
+    <div class="pannel-left" style="width: 15%;">
+        <div class="security-menu active" (click)="subMenuClick($event,'User')">User</div>
+        <div class="security-menu" (click)="subMenuClick($event,'Group Role')">Group Role</div>
+    </div>
+    <div class="pannel-right" style="width: 80%;">
+        <h5>Security > {{screenLoad}}</h5>
+        <!-- Inner Component -->
+        <div *ngIf="screenLoad === 'User'">
+            <app-userprofile></app-userprofile>
+        </div>
+        <div *ngIf="screenLoad === 'Group Role'">
+            <app-grouprole></app-grouprole>
+        </div>
+    </div>
+</div>

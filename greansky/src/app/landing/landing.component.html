@@ -1,0 +1,13 @@
+<app-common-header></app-common-header>
+<div class="menu-container">
+    <div class="menu" (click)="menuClick($event,'')">Company Management</div>
+    <div class="menu" (click)="menuClick($event,'')">Device Management</div>
+    <div class="menu" (click)="menuClick($event,'')">White Label</div>
+    <div class="menu" (click)="menuClick($event,'SECURITY')">Security</div>
+</div>
+<!-- Inner Component -->
+<div *ngIf="screenLoad === 'SECURITY'">
+    <app-security></app-security>
+</div>
+<div *ngIf="screenLoad === ''">Comming Soon...</div>
+<app-common-footer></app-common-footer>

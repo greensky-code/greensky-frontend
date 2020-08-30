@@ -1,0 +1,34 @@
+<div class="login-section">
+    <div style="display: flex;">
+        <div style="width: 20%;margin-left: 2rem;">
+            <img src="assets/img/logo.png" style="width: 200px;height: 150px;"/>
+        </div>
+        <div style="width: 75%;align-self: center;"><h3>Company Name</h3></div>
+    </div>
+    <div align="center" >
+        <div class="login-class">
+            <div *ngIf="isLogin" style="margin-bottom:1rem;text-align: left;">
+                <h3>Login</h3>
+                <div><input class="form-control" type="text" [(ngModel)]="loginObj.email" placeholder="Email address"/></div>
+                <div><input class="form-control" type="password" [(ngModel)]="loginObj.password"  placeholder="Create password"/></div>
+            </div>
+            <div *ngIf="!isLogin" style="margin-bottom:1rem;text-align: left;">
+                <h3>Sign up</h3>
+                <div style="display:flex">
+                    <input class="form-control" type="text" [(ngModel)]="signUpObj.firstname" placeholder="First name" style="margin-right: 1rem;"/>
+                    <input class="form-control" type="text" [(ngModel)]="signUpObj.lastname" placeholder="Last name"/>
+                </div>
+                <div><input style="margin-top:0px;" class="form-control" type="text" [(ngModel)]="signUpObj.email" placeholder="Email address"/></div>
+                <div><input class="form-control" type="password" [(ngModel)]="signUpObj.password"  placeholder="Create password"/></div>
+            </div>
+            <div *ngIf="isLogin" style="display:flex;">
+              <button class="btn btn-success" (click)="login()"><i class="fa fa-check" aria-hidden="true"></i> Login</button> &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-info" (click)="goToRegister()"><i class="fa fa-user" aria-hidden="true"></i> Didn't Register! Sign up</button>
+            </div>
+            <div *ngIf="!isLogin" style="display:flex;">
+              <button class="btn btn-success" (click)="register()"><i class="fa fa-save" aria-hidden="true"></i> Register</button> &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-info" (click)="goToLogin()"><i class="fa fa-sign-in" aria-hidden="true"></i> Already Sign up! Login</button>
+            </div>
+        </div>
+    </div>
+</div>
